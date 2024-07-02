@@ -1,11 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos gerais do corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o footer */
 .footer-mel {
-    background-color: #fffb00;
+    background-color: yellow;
     padding: 20px 0;
     color: #333;
     text-align: center;
@@ -15,6 +23,7 @@ body {
     width: 100%;
 }
 
+/* Estilos para o container do footer */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -23,24 +32,58 @@ body {
     align-items: center;
 }
 
+/* Estilos para o logotipo no footer */
 .logo {
-    /* Estilos para a logo podem ser adicionados aqui */
+    margin-left: -300px; /* Empurra o logotipo para a esquerda */
 }
 
+.logo img {
+    width: 150px; /* Defina um tamanho apropriado para o logotipo */
+}
+
+/* Estilos para o conteúdo do footer */
 .footer-content {
     margin-top: 10px;
 }
 
+/* Estilos para os parágrafos no conteúdo do footer */
 .footer-content p {
     margin: 5px 0;
 }
 
+/* Estilos para os links no conteúdo do footer */
 .footer-content a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Estilos para os links no conteúdo do footer durante o hover */
 .footer-content a:hover {
     text-decoration: underline;
+}
+
+/* Botão "Voltar ao Topo" */
+.btn-topo {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-topo:hover {
+    background-color: #555;
+}
+
+/* Estilos adicionais para mostrar o botão "Voltar ao Topo" quando necessário */
+body.show-btn-topo .btn-topo {
+    display: block;
 }

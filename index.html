@@ -1,21 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Temático de Mel</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Footer com Temática de Abelhas e Mel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            margin-bottom: 10px; /* Espaçamento entre logo e outros elementos */
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+            vertical-align: middle;
+        }
+        .footer-center {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 10px; /* Espaçamento entre centro e outros elementos */
+        }
+        .footer-center p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            display: inline; /* Para garantir que os parágrafos fiquem na mesma linha */
+        }
+        .footer-right {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            margin-bottom: 10px; /* Espaçamento entre topo e outros elementos */
+        }
+        .btn-topo {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        /* Media Query para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            .footer {
+                flex-direction: column; /* Coloca os itens em coluna */
+                text-align: center;
+            }
+            .logo {
+                margin-left: 0;
+            }
+            .footer-center p {
+                display: block; /* Volta ao comportamento de bloco para os parágrafos */
+                margin-bottom: 5px; /* Espaçamento entre os parágrafos */
+            }
+            .footer-right {
+                position: static; /* Volta ao posicionamento estático para estar no fluxo do documento */
+                margin-top: 10px; /* Margem acima para separar do conteúdo acima */
+            }
+        }
+    </style>
 </head>
 <body>
-    <footer class="footer-mel">
-        <div class="container">
-            <div class="logo">
-                <!-- Espaço reservado para a logo -->
-            </div>
-            <div class="footer-content">
-                <p>Nome da Escola: CC-Unidade Polo</p>
-                <p>Email: <a href="mailto:NectarNotes05@gmail.com">NectarNotes05@gmail.com</a></p>
-            </div>
+    <footer>
+        <div class="logo">
+            <img src="agrinho logo.png" alt="Logo Abelhas e Mel">
+        </div>
+        <div class="footer-center">
+            <p>Escola Abelhas e Mel&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Email: contato@escolaabelhasemel.com</p>
+        </div>
+        <div class="footer-right">
+            <a href="#topo" class="btn-topo">Voltar ao Topo</a>
         </div>
     </footer>
 </body>
