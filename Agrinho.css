@@ -1,17 +1,21 @@
+/* Reset e box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Estilos gerais do body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #f1e99e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body tenha pelo menos 100% da altura da viewport */
 }
 
-
+/* Header principal */
 .header-principal {
     background-color: #1e1d35;
     color: #fff;
@@ -114,13 +118,7 @@ body {
     background-color: #ffc107;
 }
 
-\` Menu
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* Menu lateral */
 .menu {
     background-color: #333;
     width: 250px;
@@ -129,20 +127,25 @@ body {
     overflow-y: auto;
     padding-top: 20px;
 }
+
 .menu a {
     display: block;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
 }
+
 .menu a:hover {
     background-color: #555;
 }
+
+/* Conteúdo principal */
 .content {
-    height: 500px;
     margin-left: 250px;
     padding: 20px;
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
 }
+
 @media (max-width: 480px) {
     .menu {
         width: 100%;
@@ -152,36 +155,32 @@ body {
     .content {
         margin-left: 0;
     }
-
-
-
 }
 
-
-
-
+/* Footer */
 footer {
     background-color: #1e1d35;
-    color: rgb(255, 255, 255);
-    padding: 5px;
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     border: solid black 3px;
+    margin-top: auto; /* Garante que o footer fique no final da página */
 }
 
 .footer-section {
     flex: 1;
     margin: 10px;
-    min-width: 180px; /* Ajustado para acomodar 5 colunas */
+    min-width: 180px;
 }
 
 .footer-section.middle {
-    margin: 10px 20px; /* Define um maior espaçamento nas seções do meio */
+    margin: 10px 20px;
 }
 
 .footer-section.right {
-    margin-left: auto; /* Alinha à direita */
+    margin-left: auto;
 }
 
 .footer-section h4 {
@@ -214,14 +213,14 @@ footer {
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza horizontalmente as imagens */
+    justify-content: center;
     margin-bottom: 10px;
-    height: 100px; /* Ajuste conforme necessário */
+    height: 100px;
 }
 
 .logo img {
     vertical-align: middle;
-    margin-right: 10px; /* Espaçamento entre logos */
+    margin-right: 10px;
 }
 
 .description {
@@ -250,31 +249,65 @@ footer {
     margin: 0 5px;
 }
 
-
 .social-buttons img {
     width: 30px;
     height: 30px;
     border-radius: 7px;
 }
 
-
 .btn-topo {
     color: #fff;
-    padding: 5px; /* Ajuste do padding para botões menores */
+    padding: 5px;
     border-radius: 5px;
     text-decoration: none;
-    width: 160px; /* Largura fixa dos botões */
-    margin-bottom: 5px; /* Espaçamento entre os botões */
-    display: block; /* Para que cada botão ocupe toda a largura disponível */
-    font-size: 0.8em; /* Redução do tamanho da fonte */
+    width: 160px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 0.8em;
 }
 
 .btn-topo:hover {
     color: yellow;
     transition: .3s;
-
 }
 
 #Atalhos {
     margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #bbb 1px solid;
+}
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+article {
+    margin: 20px 0;
+}
+h2 {
+    color: #333;
+}
+h3 {
+    color: #666;
+}
+p {
+    margin: 15px 0;
+}
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
