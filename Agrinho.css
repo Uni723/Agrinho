@@ -1,21 +1,17 @@
-/* Reset e box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos gerais do body */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o body tenha pelo menos 100% da altura da viewport */
+    background-color: #f1e99e;
 }
 
-/* Header principal */
+
 .header-principal {
     background-color: #1e1d35;
     color: #fff;
@@ -60,7 +56,71 @@ body {
     color: #ffd700;
 }
 
-/* Menu lateral */
+/* Banner */
+.banner {
+    position: relative;
+    height: 300px; 
+    background-color: #333; 
+    overflow: hidden;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('banner.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; 
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content .btn:hover {
+    background-color: #ffc107;
+}
+
+\` Menu
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 .menu {
     background-color: #333;
     width: 250px;
@@ -69,25 +129,20 @@ body {
     overflow-y: auto;
     padding-top: 20px;
 }
-
 .menu a {
     display: block;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
 }
-
 .menu a:hover {
     background-color: #555;
 }
-
-/* Conteúdo principal */
 .content {
+    height: 500px;
     margin-left: 250px;
     padding: 20px;
-    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
 }
-
 @media (max-width: 480px) {
     .menu {
         width: 100%;
@@ -97,32 +152,36 @@ body {
     .content {
         margin-left: 0;
     }
+
+
+
 }
 
-/* Footer */
+
+
+
 footer {
     background-color: #1e1d35;
-    color: #fff;
-    padding: 20px;
+    color: rgb(255, 255, 255);
+    padding: 5px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     border: solid black 3px;
-    margin-top: auto; /* Garante que o footer fique no final da página */
 }
 
 .footer-section {
     flex: 1;
     margin: 10px;
-    min-width: 180px;
+    min-width: 180px; /* Ajustado para acomodar 5 colunas */
 }
 
 .footer-section.middle {
-    margin: 10px 20px;
+    margin: 10px 20px; /* Define um maior espaçamento nas seções do meio */
 }
 
 .footer-section.right {
-    margin-left: auto;
+    margin-left: auto; /* Alinha à direita */
 }
 
 .footer-section h4 {
@@ -151,22 +210,18 @@ footer {
 .footer-section ul li a:hover {
     text-decoration: underline;
 }
-video {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
+
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centraliza horizontalmente as imagens */
     margin-bottom: 10px;
-    height: 100px;
+    height: 100px; /* Ajuste conforme necessário */
 }
 
 .logo img {
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 10px; /* Espaçamento entre logos */
 }
 
 .description {
@@ -195,178 +250,31 @@ video {
     margin: 0 5px;
 }
 
+
 .social-buttons img {
     width: 30px;
     height: 30px;
     border-radius: 7px;
 }
 
+
 .btn-topo {
     color: #fff;
-    padding: 5px;
+    padding: 5px; /* Ajuste do padding para botões menores */
     border-radius: 5px;
     text-decoration: none;
-    width: 160px;
-    margin-bottom: 5px;
-    display: block;
-    font-size: 0.8em;
+    width: 160px; /* Largura fixa dos botões */
+    margin-bottom: 5px; /* Espaçamento entre os botões */
+    display: block; /* Para que cada botão ocupe toda a largura disponível */
+    font-size: 0.8em; /* Redução do tamanho da fonte */
 }
 
 .btn-topo:hover {
     color: yellow;
     transition: .3s;
+
 }
 
 #Atalhos {
     margin-bottom: 20px;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #bbb 1px solid;
-}
-header h1 {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-
-.parallax-container {
-    position: relative;
-    height: 455px;
-    overflow: hidden;
-    background-color: #ffffff; /* Cor de fundo para suavizar o efeito */
-}
-
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Começa invisível */
-    animation: fadeIn 2s ease-out forwards, moveUp 2s ease-out forwards;
-}
-
-.layer-1 {
-    background-image: url('TELA1.png');
-    z-index: 1;
-    animation-delay: 0s, 0s; /* Sem atraso para o fade-in */
-}
-
-.layer-2 {
-    background-image: url('TELA2.png');
-    z-index: 2;
-    animation-delay: 0.5s, 0.5s; /* Atraso para o fade-in e movimento */
-}
-
-.layer-3 {
-    background-image: url('TELA%203.png');
-    z-index: 3;
-    animation-delay: 1s, 1s; /* Atraso para o fade-in e movimento */
-}
-
-.layer-4 {
-    background-image: url('TELA%204.png');
-    z-index: 4;
-    animation-delay: 1.5s, 1.5s; /* Atraso para o fade-in e movimento */
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(15%); /* Começa mais abaixo */
-    }
-    100% {
-        transform: translateY(0%); /* Move para a posição original */
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Começa invisível */
-    }
-    100% {
-        opacity: 1; /* Torna-se completamente visível */
-    }
-}
-
-.content {
-    position: relative;
-    padding: 20px;
-    background: #fff;
-    z-index: 5;
-}
-/* Estilo para a div que contém o texto do site */
-.content {
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 1200px; /* Limita a largura máxima para uma melhor leitura em telas grandes */
-    font-family: Arial, sans-serif; /* Define uma fonte limpa e legível */
-}
-
-/* Estilo para os títulos dentro da seção de conteúdo */
-.content h2, .content h3 {
-    color: #333; /* Cor do texto dos títulos */
-    font-family: 'Georgia', serif; /* Fonte serifada para os títulos */
-    font-size: 2em; /* Tamanho maior para os títulos */
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #f2a900; /* Linha mais espessa abaixo dos títulos */
-    padding-bottom: 10px;
-    background-color: #ffe0b2; /* Cor de fundo leve para destacar os títulos */
-    border-radius: 8px; /* Cantos arredondados para os títulos */
-    padding: 10px; /* Padding adicional para os títulos */
-}
-
-/* Estilo para os parágrafos */
-.content p {
-    color: #444; /* Cor do texto dos parágrafos */
-    font-size: 1.2em; /* Aumenta o tamanho da fonte dos parágrafos */
-    line-height: 1.8; /* Melhora a legibilidade com maior espaçamento entre linhas */
-    margin-bottom: 25px;
-}
-
-/* Estilo para as listas dentro da seção de conteúdo */
-.content ul {
-    list-style-type: disc; /* Tipo de marcador para as listas */
-    margin-left: 30px;
-}
-
-/* Estilo para os itens da lista */
-.content ul li {
-    margin-bottom: 15px;
-    font-size: 1.2em; /* Aumenta o tamanho da fonte dos itens da lista */
-}
-
-/* Estilo para o container de vídeo */
-.video-container {
-    margin: 30px 0;
-    text-align: center; /* Centraliza o vídeo */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais pronunciada para o container do vídeo */
-    padding: 10px;
-    background-color: #fff; /* Fundo branco para o container do vídeo */
-}
-
-.video-container video {
-    max-width: 100%; /* Faz o vídeo se ajustar à largura do container */
-    height: auto; /* Mantém a proporção original do vídeo */
-}
-
-/* Adiciona um pouco de padding, margem e estilo para as seções */
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #fff; /* Cor de fundo clara para as seções */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra suave ao redor das seções */
 }
