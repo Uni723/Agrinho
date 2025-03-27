@@ -12,102 +12,165 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o body tenha pelo menos 100% da altura da viewport */
+    min-height: 100vh;
+    color: #333;
 }
 
-/* Header principal */
 .header-principal {
-    background-color: #1e1d35;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4570ff;
+    padding: 5px 20px;  /* Diminui o padding para reduzir o tamanho */
+    z-index: 10; /* Fixa o header acima do parallax */
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center;
+}
+
+.logo-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 10px;
 }
 
-.Headerlogo {
-    width: 50px;
+.logo {
+    height: 40px; /* Diminui o tamanho da logo */
+}
+
+.titulo-header {
+    font-size: 3rem; /* Diminui o tamanho da fonte */
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px; /* Dá um pequeno espaço entre a logo e o título */
+}
+/* Parallax */
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: auto;
-    margin-left: 20px;
-    margin-right: 10px;
+    transform: translateZ(0);
+    transition: transform 0.5s ease-out;
 }
 
-.header-principal h1 {
-    font-size: 24px;
-    margin-right: auto;
-    text-transform: uppercase;
+.layer1 {
+    z-index: 4;
 }
 
-.header-principal nav ul {
-    list-style-type: none;
-    padding: 0;
+.layer2 {
+    z-index: 3;
 }
 
-.header-principal nav ul li {
-    display: inline;
-    margin-right: 20px;
+.layer3 {
+    z-index: 2;
 }
 
-.header-principal nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.layer4 {
+    z-index: 2;
 }
 
-.header-principal nav ul li a:hover {
-    color: #ffd700;
+.header {
+    padding: 20px;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
-/* Menu lateral */
-.menu {
-    background-color: #333;
-    width: 250px;
-    position: fixed;
-    height: 100%;
-    overflow-y: auto;
-    padding-top: 20px;
-}
+/* Restante do CSS... */
 
-.menu a {
-    display: block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    background-color: #555;
-}
 
 /* Conteúdo principal */
 .content {
-    margin-left: 250px;
-    padding: 20px;
-    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 480px) {
-    .menu {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .content {
-        margin-left: 0;
-    }
+.content h2, .content h3 {
+    font-size: 2.2em;
+    color: #1e1d35; /* Cor de texto escura para contraste */
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid #f2a900;
+    padding-bottom: 8px;
 }
 
-/* Footer */
+.content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #444; /* Cor suave para os parágrafos */
+}
+
+.video-container {
+    margin: 40px 0;
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+}
+
+/* Estilo para os títulos das seções */
+section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Botões de navegação para o topo e tópicos */
+.btn-topo {
+    color: #fff;
+    padding: 8px 20px;
+    background-color: #f2a900;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.btn-topo:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
+
 footer {
-    background-color: #1e1d35;
+    background-color: #4570ff;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: solid black 3px;
+    border: solid rgb(255, 255, 255) 3px;
     margin-top: auto; /* Garante que o footer fique no final da página */
 }
 
@@ -200,252 +263,33 @@ video {
     height: 30px;
     border-radius: 7px;
 }
-
-.btn-topo {
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    width: 160px;
-    margin-bottom: 5px;
-    display: block;
-    font-size: 0.8em;
-}
-
-.btn-topo:hover {
-    color: yellow;
-    transition: .3s;
-}
-
-#Atalhos {
-    margin-bottom: 20px;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #bbb 1px solid;
-}
-header h1 {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-
-.parallax-container {
-    position: relative;
-    height: 455px;
-    overflow: hidden;
-    background-color: #ffffff; /* Cor de fundo para suavizar o efeito */
-}
-
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Começa invisível */
-    animation: fadeIn 2s ease-out forwards, moveUp 2s ease-out forwards;
-}
-
-.layer-1 {
-    background-image: url('TELA1.png');
-    z-index: 1;
-    animation-delay: 0s, 0s; /* Sem atraso para o fade-in */
-}
-
-.layer-2 {
-    background-image: url('TELA2.png');
-    z-index: 2;
-    animation-delay: 0.5s, 0.5s; /* Atraso para o fade-in e movimento */
-}
-
-.layer-3 {
-    background-image: url('TELA%203.png');
-    z-index: 3;
-    animation-delay: 1s, 1s; /* Atraso para o fade-in e movimento */
-}
-
-.layer-4 {
-    background-image: url('TELA%204.png');
-    z-index: 4;
-    animation-delay: 1.5s, 1.5s; /* Atraso para o fade-in e movimento */
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(15%); /* Começa mais abaixo */
-    }
-    100% {
-        transform: translateY(0%); /* Move para a posição original */
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Começa invisível */
-    }
-    100% {
-        opacity: 1; /* Torna-se completamente visível */
-    }
-}
-
-.content {
-    position: relative;
-    padding: 20px;
-    background: #fff;
-    z-index: 5;
-}
-/* Estilo para a div que contém o texto do site */
-.content {
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 1200px; /* Limita a largura máxima para uma melhor leitura em telas grandes */
-    font-family: Arial, sans-serif; /* Define uma fonte limpa e legível */
-}
-
-/* Estilo para os títulos dentro da seção de conteúdo */
-.content h2, .content h3 {
-    color: #333; /* Cor do texto dos títulos */
-    font-family: 'Georgia', serif; /* Fonte serifada para os títulos */
-    font-size: 2em; /* Tamanho maior para os títulos */
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #f2a900; /* Linha mais espessa abaixo dos títulos */
-    padding-bottom: 10px;
-    background-color: #ffe0b2; /* Cor de fundo leve para destacar os títulos */
-    border-radius: 8px; /* Cantos arredondados para os títulos */
-    padding: 10px; /* Padding adicional para os títulos */
-}
-
-/* Estilo para os parágrafos */
-.content p {
-    color: #444; /* Cor do texto dos parágrafos */
-    font-size: 1.2em; /* Aumenta o tamanho da fonte dos parágrafos */
-    line-height: 1.8; /* Melhora a legibilidade com maior espaçamento entre linhas */
-    margin-bottom: 25px;
-}
-
-/* Estilo para as listas dentro da seção de conteúdo */
-.content ul {
-    list-style-type: disc; /* Tipo de marcador para as listas */
-    margin-left: 30px;
-}
-
-/* Estilo para os itens da lista */
-.content ul li {
-    margin-bottom: 15px;
-    font-size: 1.2em; /* Aumenta o tamanho da fonte dos itens da lista */
-}
-
-/* Estilo para o container de vídeo */
-.video-container {
-    margin: 30px 0;
-    text-align: center; /* Centraliza o vídeo */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais pronunciada para o container do vídeo */
-    padding: 10px;
-    background-color: #fff; /* Fundo branco para o container do vídeo */
-}
-
-.video-container video {
-    max-width: 100%; /* Faz o vídeo se ajustar à largura do container */
-    height: auto; /* Mantém a proporção original do vídeo */
-}
-
-/* Adiciona um pouco de padding, margem e estilo para as seções */
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #fff; /* Cor de fundo clara para as seções */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra suave ao redor das seções */
-}
-/* Adiciona responsividade para telas menores que 1200px */
-@media (max-width: 1200px) {
-    .container {
-      width: 90%;
-    }
-    .content {
-      padding: 20px;
-    }
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
     .header-principal {
-      padding: 10px 0;
+        flex-direction: column;
+        text-align: center;
     }
-    .menu {
-      width: 200px;
+
+    .header-principal nav ul {
+        padding-top: 10px;
     }
-    .footer-section {
-      flex: 1 0 30%;
-    }
-  }
-  
-  /* Adiciona responsividade para telas menores que 992px */
-  @media (max-width: 992px) {
-    .container {
-      width: 95%;
-    }
+
     .content {
-      padding: 15px;
+        padding: 20px;
     }
-    .header-principal {
-      padding: 5px 0;
-    }
-    .menu {
-      width: 150px;
-    }
+
     .footer-section {
-      flex: 1 0 40%;
+        flex: 1 0 45%;
     }
-  }
-  
-  /* Adiciona responsividade para telas menores que 768px */
-  @media (max-width: 768px) {
-    .container {
-      width: 100%;
+
+    .social-buttons img {
+        width: 35px;
+        height: 35px;
     }
-    .content {
-      padding: 10px;
+
+    .btn-topo {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
     }
-    .header-principal {
-      padding: 0;
-    }
-    .menu {
-      width: 100%;
-      position: relative;
-      height: auto;
-    }
-    .footer-section {
-      flex: 1 0 50%;
-    }
-  }
-  
-  /* Adiciona responsividade para telas menores que 480px */
-  @media (max-width: 480px) {
-    .container {
-      width: 100%;
-    }
-    .content {
-      padding: 5px;
-    }
-    .header-principal {
-      padding: 0;
-    }
-    .menu {
-      width: 100%;
-      position: relative;
-      height: auto;
-    }
-    .footer-section {
-      flex: 1 0 60%;
-    }
-  }
+}

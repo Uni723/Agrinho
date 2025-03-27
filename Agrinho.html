@@ -10,28 +10,30 @@
 </head>
 
 <body>
-
+    <!-- Header com logo e título -->
+    <header class="header-principal">
+        <div class="logo-container">
+            <img src="./Imagens/agrinhoLogo.png" alt="Logo Agrinho" class="logo">
+            <h1 class="titulo-header">Agrinho</h1>
+        </div>
+    </header>
 
     <section id="topo" class="section">
-        <header class="header-principal">
-            <img src="./Imagens/agrinhoLogo.png" alt="Logo do Meu Site" class="Headerlogo">
-            <h1>AGRINHO</h1>
-            <nav>
-                <ul>
-                    <li><a href="Agrinho.html">Página Inicial</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
-                </ul>
-            </nav>
+        <header class="header">
+            <div class="parallax">
+                <img src="TELA 3.png" class="parallax-layer layer1">
+                <img src="TELA 4.png" class="parallax-layer layer2">
+                <img src="TELA1.png" class="parallax-layer layer3">
+                <img src="TELA2.png" class="parallax-layer layer4">
+            </div>
         </header>
         <div class="parallax-container">
-            
             <div class="parallax-layer layer-1"></div>
             <div class="parallax-layer layer-2"></div>
             <div class="parallax-layer layer-3"></div>
             <div class="parallax-layer layer-4"></div>
         </div>
-        </head>
+    </section>
         <body>
             <main>
                 <div class="content">
@@ -149,6 +151,18 @@
 </html>
 
 </main>
+<script>
+    document.addEventListener('scroll', function () {
+       let scrollPosition = window.scrollY;
+
+       // Ajuste o valor do parallax conforme necessário para cada camada
+       document.querySelector('.layer1').style.transform = `translateY(${scrollPosition * 0.4}px)`;
+       document.querySelector('.layer2').style.transform = `translateY(${scrollPosition * 0.2}px)`;
+       document.querySelector('.layer3').style.transform = `translateY(${scrollPosition * 0.1}px)`;
+       document.querySelector('.layer4').style.transform = `translateY(${scrollPosition * 0.3}px)`;
+   });
+
+</script>
 </body>
 
 </html>
