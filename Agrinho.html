@@ -7,150 +7,243 @@
     <link rel="shortcut icon" type="image/png" href="Imagens/agrinhoLogo.png">
     <title>NectarWiki</title>
     <link rel="stylesheet" href="Agrinho.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header com logo e título -->
-    <header class="header-principal">
-        <div class="logo-container">
-            <img src="./Imagens/agrinhoLogo.png" alt="Logo Agrinho" class="logo">
-            <h1 class="titulo-header">Agrinho</h1>
+    <header class="header-principal text-white py-3" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo-container d-flex align-items-center">
+                <img src="./Imagens/agrinhoLogo.png" alt="Logo Agrinho" class="logo me-3" style="height: 50px;">
+                <h1 class="titulo-header m-0">Agrinho</h1>
+            </div>
         </div>
     </header>
 
-    <section id="topo" class="section">
-        <header class="header">
-            <div class="parallax">
-                <img src="TELA 3.png" class="parallax-layer layer1">
-                <img src="TELA 4.png" class="parallax-layer layer2">
-                <img src="TELA1.png" class="parallax-layer layer3">
-                <img src="TELA2.png" class="parallax-layer layer4">
-            </div>
-        </header>
-        <div class="parallax-container">
-            <div class="parallax-layer layer-1"></div>
-            <div class="parallax-layer layer-2"></div>
-            <div class="parallax-layer layer-3"></div>
-            <div class="parallax-layer layer-4"></div>
+    <!-- Seção principal com parallax -->
+    <section id="topo" class="section" style="height: 50vh; position: relative; overflow: hidden;">
+        <div class="parallax" style="height: 100%; position: relative;">
+            <img src="TELA 3.png" class="parallax-layer layer1" style="position: absolute; width: 100%; height: auto;">
+            <img src="TELA 4.png" class="parallax-layer layer2" style="position: absolute; width: 100%; height: auto;">
+            <img src="TELA1.png" class="parallax-layer layer3" style="position: absolute; width: 100%; height: auto;">
+            <img src="TELA2.png" class="parallax-layer layer4" style="position: absolute; width: 100%; height: auto;">
         </div>
     </section>
-        <body>
-            <main>
-                <div class="content">
-                    <!-- Player de vídeo -->
-                    <div class="video-container">
-                        <iframe width="900" height="500" src="https://www.youtube.com/embed/jzK1D4_Vcxk?si=Ql6iqvzT7pHniW0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- Conteúdo principal -->
+    <main class="container my-5">
+        <!-- Player de vídeo -->
+        <div class="video-container mb-5 text-center">
+            <iframe width="900" height="500" src="https://www.youtube.com/embed/jzK1D4_Vcxk?si=Ql6iqvzT7pHniW0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Texto com tópicos -->
+        <div class="row">
+            <!-- Apicultura: A Arte e Ciência -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                    <div class="card-body text-center text-white">
+                        <h2 class="fw-bold">🐝 Apicultura: A Arte e Ciência do Manejo das Abelhas</h2>
+                        <p class="mt-3">Descubra o fascinante mundo das abelhas e como elas impactam nossas vidas!</p>
                     </div>
-    
-                    <!-- Texto -->
-                    <section>
-
-                        <h2 id="Topico-1">O que é apicultura</h2>
-                        <p>A apicultura é a prática de criar abelhas em colmeias para produzir mel, cera de abelha, própolis, geleia real e outros produtos apícolas. Além de proporcionar esses produtos, a apicultura desempenha um papel vital na polinização de plantas, o que é crucial para a agricultura e a biodiversidade. Os apicultores cuidam das abelhas, garantindo que tenham um ambiente saudável para prosperar e maximizar a produção de mel. Essa prática pode ser realizada em diferentes escalas, desde pequenos apicultores que mantêm algumas colmeias até grandes operações comerciais.</p>
-
-                        <h2 id="Topico-2">Como Criar abelhas</h2>
-                        <p>A criação de abelhas na apicultura é uma atividade que requer planejamento e conhecimento. Começa com a pesquisa sobre a biologia das abelhas, manejo de colmeias e legislação. A escolha do local para instalar as colmeias é crucial, precisando ser seguro, acessível e com muitas flores próximas. Equipamentos de qualidade são necessários para a segurança do apicultor e das abelhas.
-
-                        Selecionar abelhas adequadas ao clima e aos objetivos da apicultura é fundamental. O manejo regular das colmeias inclui inspeções, monitoramento da saúde das abelhas e controle de pragas. A colheita do mel deve ser feita com cuidado para preservar a qualidade do produto.
-                            
-                        Manter as abelhas saudáveis é essencial, exigindo monitoramento contínuo e práticas integradas de manejo. Participar de associações de apicultores oferece aprendizado e troca de experiências. Com esses passos, a apicultura pode ser uma
-                        atividade produtiva e sustentável, contribuindo para a biodiversidade e os ecossistemas.</p>
-
-
-                        <h2 id="Topico-3">Como extrair o mel</h2>
-                        <p> A extração de mel é uma parte essencial da apicultura que requer cuidados para garantir a qualidade do produto e a saúde das abelhas. O processo começa com a preparação adequada: verifique se os favos estão maduros e com baixo teor de umidade e reúna todos os equipamentos necessários, como um extrator de mel, faca de desopercular e peneira.
-                            
-                        Para iniciar, use um fumegador para acalmar as abelhas antes de abrir a colmeia. Em seguida, retire os favos maduros e remova a camada de cera que sela as células do favo com uma faca de desopercular. Após isso, coloque os favos desoperculados em um extrator de mel e gire-o para separar o mel dos favos por força centrífuga.
-                            
-                        Depois da extração, filtre o mel para remover resíduos e armazene-o em frascos limpos e secos, em um local fresco e escuro. Finalmente, recoloque os favos vazios na colmeia para que as abelhas possam reutilizá-los.
-                            
-                        Seguindo esses passos, você garantirá uma extração eficiente e segura do mel, mantendo a qualidade do produto e a saúde das abelhas.</p>    
-
-
-                        <h2 id="Topico-4"><strong>Apicultura no Norte do Paraná</strong></h2>
-                        <p>A apicultura no Paraná é uma atividade significativa tanto econômica quanto ambientalmente. O estado, com sua rica diversidade de flora, oferece condições ideais para a criação de abelhas e produção de diferentes tipos de mel. A apicultura no Paraná contribui substancialmente para a economia local, sendo uma fonte importante de renda para muitos produtores rurais e gerando produtos apícolas valiosos.
-                        Além de seu impacto econômico, a apicultura no Paraná desempenha um papel crucial na polinização de culturas e na conservação da biodiversidade. As abelhas ajudam a polinizar uma variedade de plantas, o que é essencial para a saúde dos ecossistemas e a produção agrícola.
-                            
-                        O Paraná também se destaca em pesquisa e inovação na área, com universidades e instituições dedicadas ao estudo da saúde das abelhas e ao desenvolvimento de técnicas de manejo. A presença de cooperativas e associações de apicultores fortalece a cadeia produtiva e facilita o acesso a mercados e conhecimentos.
-                            
-                        Com o crescente interesse no turismo apícola e programas de educação sobre a importância das abelhas, a apicultura no
-                        Paraná continua a crescer e a impactar positivamente a região.</p>
-    
-
-                        <h2><strong>Efeitos dos agrotóxicos na apicultura</strong></h2>    
-                        <p>No Paraná, a produção de mel é uma das maiores do Brasil, sendo a segunda maior do país segundo estatísticas do IBGE de 2022. É possível notar um aumento em relação a 2021, e a cada dia a nossa região vem se destacando mais e mais. Com um clima propício, bons pontos de coleta, equipamentos adequados e um pouco de coragem, qualquer um pode seguir esse hobby. Porém, é importante dar um adendo: com novos agrotóxicos na apicultura, a prática vem se tornando mais difícil. Os efeitos das toxinas matam todo e qualquer tipo de inseto, o que tem sido um problema para alguns produtores. Diz Odilson, produtor local: “Os agrotóxicos utilizados hoje são muito nocivos para as abelhas, e então eu venho perdendo muitas colmeias de abelha.”</p>
-    
-                        <h3><strong>Benefícios e Lucratividade</strong></h3>
-                        <p>Existem diversos benefícios na criação das abelhas. Esses pequenos insetos são de extrema importância para a fertilização e produção de sementes, pois são essas polinizadoras que fazem esse trabalho chegar nas flores e árvores do planeta, fazendo o trabalho de fertilizar, entrando em contato com a planta, ou com o auxílio do vento. Além de boas para o meio ambiente, são uma boa fonte de renda, gerando um salário médio de R$2.054,73, segundo o site <a href="https://querobolsa.com.br/cursos-e-faculdades/apicultura/quanto-ganha-apicultor-salario">Quero Bolsa</a>. Porém, é muito possível lucrar mais, dependendo da quantidade de colmeias do produtor ou a quem o apicultor trabalha.</p>
-    
-                        <h3><strong>Desafios da Apicultura</strong></h3>
-                        <p>O principal motivo que leva as pessoas a não ingressar na apicultura é a falta de conhecimento especializado na área. Porém, é possível levar em consideração os custos dos equipamentos, que giram em torno de R$350 por 50 colmeias, além das vestimentas adequadas de proteção, como o macacão que gira em torno dos R$500. Além desses custos, deve-se levar em consideração a criação e o cuidado dos insetos. Com os agrotóxicos que vêm matando os enxames, é preciso de um trabalho bem feito e especializado, conforme foi recomendado por todos os entrevistados.</p>
-
-                        <h3><strong>Venda do mel e derivados</strong></h3>
-                        <p>A venda de mel e seus derivados, como cera de abelha, própolis e geleia real, é um setor crescente no mercado de produtos naturais e orgânicos. O mel é valorizado por suas propriedades nutritivas e medicinais, e sua demanda é impulsionada pela busca por alimentos saudáveis. Derivados como a cera de abelha são usados em cosméticos e produtos artesanais, enquanto a própolis e a geleia real são apreciadas por suas propriedades terapêuticas. O mercado pode incluir tanto produtores locais quanto grandes empresas, com tendências que favorecem a produção sustentável e a qualidade do produto.</p>
-                    </section>
                 </div>
-            </main>
-        </body>
-        </html>
             </div>
-            <footer>
-                <div class="footer-section">
-                    <div class="logo">
-                        <img id="LogoSite" src="./Imagens/agrinhoLogo.png" alt="Logo Agrinho">
+
+            <!-- Introdução à Apicultura -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            <i class="bi bi-book"></i> Introdução à Apicultura
+                        </h3>
+                        <p class="text-muted">A apicultura, ou criação de abelhas, é uma atividade milenar que combina saberes tradicionais com técnicas modernas. Seja para a produção de mel, própolis, cera e outros derivados, o manejo adequado das abelhas é fundamental tanto para a economia quanto para a sustentabilidade ambiental.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Mel:</b> Um dos alimentos naturais mais apreciados.</li>
+                            <li class="list-group-item"><b>Própolis:</b> Possui propriedades antibacterianas e antivirais.</li>
+                            <li class="list-group-item"><b>Cera:</b> Utilizada na fabricação de velas, cosméticos e produtos medicinais.</li>
+                            <li class="list-group-item"><b>Geoprópolis e Pólen:</b> Utilizados em suplementos alimentares e medicinais.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-section middle">
-                    <div class="description">
-                        <h5><b>No projeto Agrinho deste ano, criamos um site com o tema "Do Campo à Cidade", focado na
-                                apicultura,
-                                que é a criação de abelhas. O site mostra como as abelhas são importantes tanto no campo
-                                quanto na cidade. Lá,
-                                você pode aprender como cuidar das colmeias, como o mel é feito e descobrir o papel
-                                vital
-                                das abelhas na polinização das plantas.
-                                Com vídeos e artigos, nosso objetivo é mostrar como a apicultura é essencial para a
-                                natureza
-                                e para nós.
-                                É uma maneira divertida e educativa de entender por que precisamos proteger as abelhas e
-                                como elas contribuem para um mundo mais sustentável.</b></h5>
+            </div>
+
+            <!-- História e Evolução da Apicultura -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-secondary fw-bold"><i class="bi bi-clock-history"></i> História e Evolução da Apicultura</h3>
+                        <p class="text-muted">A prática da apicultura tem raízes que se estendem por milhares de anos, evoluindo desde métodos rústicos de manejo natural até sistemas modernos com tecnologia de monitoramento e manejo sustentável.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Origens Antigas:</b> Registros históricos apontam que a criação de abelhas já era praticada na Antiguidade em diversas culturas.</li>
+                            <li class="list-group-item"><b>Inovações Tecnológicas:</b> O desenvolvimento de colmeias modernas, como as colmeias Langstroth, revolucionou a apicultura, possibilitando maior controle sobre a colônia e facilitando a colheita dos produtos.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-section middle">
-                    <b>
-                        <h4>Contato</h4>
-                        <p>Email: NectarNotes05@gmail.com</p>
-                        <p>Escola: CCM Unidade Polo</p>
-                        <p>Endereço: Rua Santos Dumont 1984, Campo Mourão-PR</p>
-                    </b>
+            </div>
+
+            <!-- Técnicas e Equipamentos -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            <i class="bi bi-tools"></i> Técnicas e Equipamentos na Apicultura Moderna
+                        </h3>
+                        <h4 class="text-white p-2 mt-4" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Manejo das Colmeias
+                        </h4>
+                        <p class="text-muted">O manejo adequado das colmeias é essencial para garantir a saúde das abelhas. Entre as práticas comuns, destacam-se:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Inspeção Regular:</b> Verificar a presença de pragas, doenças e o desenvolvimento da colônia.</li>
+                            <li class="list-group-item"><b>Controle de Parasitas:</b> Uso de tratamentos específicos para combater ácaros e outros parasitas.</li>
+                            <li class="list-group-item"><b>Reprodução das Abelhas:</b> Técnicas para aumentar a população das colmeias, garantindo a polinização e a produção de mel.</li>
+                        </ul>
+                        <h4 class="text-white p-2 mt-4" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Equipamentos Utilizados
+                        </h4>
+                        <p class="text-muted">A modernização da apicultura trouxe equipamentos que aumentam a eficiência e reduzem o estresse nas abelhas, tais como:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Fumigadores:</b> Utilizados para acalmar as abelhas durante as inspeções.</li>
+                            <li class="list-group-item"><b>Roupas de Proteção:</b> Garantem a segurança dos apicultores.</li>
+                            <li class="list-group-item"><b>Ferramentas Específicas:</b> Como os extratores de mel, que facilitam a separação do mel dos quadros.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefícios e Desafios -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Benefícios e Desafios da Apicultura
+                        </h3>
+                        <h4 class="text-white p-2 mt-4" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Benefícios
+                        </h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Sustentabilidade Ambiental:</b> As abelhas são polinizadoras essenciais, contribuindo para a biodiversidade e para a produção agrícola.</li>
+                            <li class="list-group-item"><b>Renda Extra:</b> A apicultura pode ser uma importante fonte de renda para pequenos produtores.</li>
+                            <li class="list-group-item"><b>Saúde e Bem-Estar:</b> Produtos apícolas são reconhecidos por suas propriedades terapêuticas e nutricionais.</li>
+                            <li class="list-group-item"><b>Lucratividade:</b> A apicultura pode gerar um salário médio de R$2.054,73, com potencial de aumento dependendo da escala de produção.</li>
+                        </ul>
+                        <h4 class="text-white p-2 mt-4" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Desafios
+                        </h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Doenças e Parasitas:</b> Infestações podem comprometer a saúde das colmeias.</li>
+                            <li class="list-group-item"><b>Mudanças Climáticas:</b> Alterações no clima podem afetar a disponibilidade de flores e a produção de mel.</li>
+                            <li class="list-group-item"><b>Poluição e Uso de Agrotóxicos:</b> Impactos negativos na saúde das abelhas e na qualidade dos produtos.</li>
+                            <li class="list-group-item"><b>Falta de Conhecimento:</b> A falta de especialização na área é um dos principais motivos que afastam novos apicultores.</li>
+                            <li class="list-group-item"><b>Custos Iniciais:</b> Equipamentos e vestimentas adequadas, como macacões e colmeias, podem ser caros para iniciantes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apicultura no Norte do Paraná -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Apicultura no Norte do Paraná
+                        </h3>
+                        <p class="text-muted">A apicultura no Paraná é uma atividade significativa tanto econômica quanto ambientalmente. O estado, com sua rica diversidade de flora, oferece condições ideais para a criação de abelhas e produção de diferentes tipos de mel.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Impacto Econômico:</b> A apicultura é uma fonte importante de renda para muitos produtores rurais e gera produtos apícolas valiosos.</li>
+                            <li class="list-group-item"><b>Conservação da Biodiversidade:</b> As abelhas ajudam a polinizar uma variedade de plantas, essenciais para a saúde dos ecossistemas e a produção agrícola.</li>
+                            <li class="list-group-item"><b>Pesquisa e Inovação:</b> Universidades e instituições no Paraná estão dedicadas ao estudo da saúde das abelhas e ao desenvolvimento de técnicas de manejo.</li>
+                            <li class="list-group-item"><b>Cooperativas e Associações:</b> Facilitam o acesso a mercados e conhecimentos, fortalecendo a cadeia produtiva.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Efeitos dos Agrotóxicos na Apicultura -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Efeitos dos Agrotóxicos na Apicultura
+                        </h3>
+                        <p class="text-muted">No Paraná, a produção de mel é uma das maiores do Brasil, mas os agrotóxicos têm se tornado um grande desafio para os apicultores. Esses produtos químicos afetam diretamente as abelhas, causando a morte de enxames inteiros.</p>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-2 text-muted">“Os agrotóxicos utilizados hoje são muito nocivos para as abelhas, e então eu venho perdendo muitas colmeias de abelha.”<br>--Odilson produtor local</p>
+                        </blockquote>
+                        <p class="text-muted">É essencial que sejam adotadas práticas agrícolas mais sustentáveis para proteger as abelhas e garantir a continuidade da apicultura na região.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venda do Mel e Derivados -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-white fw-bold p-2" style="background: linear-gradient(45deg, #ff9800, #f44336);">
+                            Venda do Mel e Derivados
+                        </h3>
+                        <p class="text-muted">A venda de mel e seus derivados, como cera de abelha, própolis e geleia real, é um setor crescente no mercado de produtos naturais e orgânicos. Esses produtos são valorizados por suas propriedades nutritivas e medicinais.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Mel:</b> Valorizado por suas propriedades nutritivas e medicinais.</li>
+                            <li class="list-group-item"><b>Cera de Abelha:</b> Usada em cosméticos e produtos artesanais.</li>
+                            <li class="list-group-item"><b>Própolis:</b> Apreciada por suas propriedades terapêuticas.</li>
+                            <li class="list-group-item"><b>Geleia Real:</b> Reconhecida por seus benefícios à saúde.</li>
+                        </ul>
+                        <p class="text-muted">O mercado favorece a produção sustentável e a qualidade do produto, beneficiando tanto pequenos produtores quanto grandes empresas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusão -->
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="text-secondary">Conclusão</h3>
+                        <p class="text-muted">A apicultura une tradição, inovação e sustentabilidade. Em Campo Mourão, o potencial para o desenvolvimento dessa atividade é evidente, refletindo na qualidade dos produtos e no fortalecimento da agricultura local. Investir em técnicas modernas e na educação ambiental garante não apenas a continuidade desta prática milenar, mas também o equilíbrio entre produção, saúde das colônias e preservação dos ecossistemas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3">
+                    <img id="LogoSite" src="./Imagens/agrinhoLogo.png" alt="Logo Agrinho" style="height: 50px;">
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <h4>Contato</h4>
+                    <p>Email: NectarNotes05@gmail.com</p>
+                    <p>Escola: CCM Unidade Polo</p>
+                    <p>Endereço: Rua Santos Dumont 1984, Campo Mourão-PR</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Redes Sociais</h4>
                     <div class="social-buttons">
-                        <a href="https://www.instagram.com/unidadepolo_/" target="_blank"><img src="./Imagens/LogoInstagram.webp"
-                                alt="Instagram"></a>
-                        <a href="https://www.facebook.com/search/top?q=unidade%20polo%20campo%20mour%C3%A3o"
-                            target="_blank"><img src="./Imagens/LogoFacebook.png" alt="Facebook"></a>
-                        <a href="mailto:NectarNotes05@gmail.com"><img src="./Imagens/LogoEmail.png" alt="Email"></a>
-                        <a href="https://x.com/NectarNotess" target="_blank"><img src="./Imagens/LogoX.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/unidadepolo_/" target="_blank" class="me-3">
+                            <i class="bi bi-instagram" style="font-size: 1.5rem; color: yellow;"></i>
+                        </a>
+                        <a href="https://www.facebook.com/search/top?q=unidade%20polo%20campo%20mour%C3%A3o" target="_blank" class="me-3">
+                            <i class="bi bi-facebook" style="font-size: 1.5rem; color: yellow;"></i>
+                        </a>
+                        <a href="mailto:NectarNotes05@gmail.com" class="me-3">
+                            <i class="bi bi-envelope" style="font-size: 1.5rem; color: yellow;"></i>
+                        </a>
+                        <a href="https://x.com/NectarNotess" target="_blank" class="me-3">
+                            <i class="bi bi-twitter" style="font-size: 1.5rem; color: yellow;"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-section middle">
-                    <h4 id="Atalhos">Atalhos</h4>
-                    <a href="#topo" class="btn-topo">Voltar ao Topo</a>
-                    <a href="#Topico-1" class="btn-topo">Oque é Apicultura</a>
-                    <a href="#Topico-2" class="btn-topo">Como Criar Abelhas</a>
-                    <a href="#Topico-3" class="btn-topo">Como Extrair o Mel</a>
-                    <a href="#Topico-4" class="btn-topo">Apicultura no Paraná</a>
-                </div>
+            </div>
+        </div>
+    </footer>
+</body>
 
-                </div>
-                <div class="footer-section right">
-                    <img id="LogoAgrinho" src="./Imagens/Programa_Agrinho.png" alt="Logo Programa Agrinho">
-            </footer>
-
-        </body>
-
-</html>
-
-</main>
 <script>
     document.addEventListener('scroll', function () {
        let scrollPosition = window.scrollY;
@@ -163,6 +256,6 @@
    });
 
 </script>
-</body>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>
